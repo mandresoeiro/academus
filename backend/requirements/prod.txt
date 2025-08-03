@@ -1,0 +1,2 @@
+# Requisitos de produção
+gunicorn

@@ -1,0 +1,3 @@
+# Requisitos base
+django
+python-decouple

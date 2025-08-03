@@ -1,0 +1,19 @@
+[project]
+name = "devilkit-backend"
+version = "0.1.0"
+description = "Backend Django da stack DevilKit"
+authors = [
+    {name = "Marcio Soeiro", email = "mandre.soeiro@gmail.com"},
+]
+dependencies = ["django>=5.2.4", "typer[all]>=0.16.0"]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
