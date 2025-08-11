@@ -12,8 +12,6 @@ from .serializers import (  # PomodoroSessionSerializer  # ⛔ Desativado tempor
 # from .models import PomodoroSession  # ⛔ Desativado temporariamente
 
 
-
-
 # ✅ Tarefas
 class TaskViewSet(viewsets.ModelViewSet):
     """
