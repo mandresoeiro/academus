@@ -1,3 +1,31 @@
-# Requisitos de desenvolvimento
+# 🧪 Dependências específicas para desenvolvimento e testes
+-r base.txt
+
 pytest
 pytest-django
+pytest-cov
+ruff          # Linter rápido
+black         # Formatador de código
+isort         # Ordenação de imports
+typer[all]    # CLI interativa
+
+
+# Dev tools
+ipython
+black
+flake8
+
+django-debug-toolbar
+
+# Documentação
+mkdocs
+mkdocstrings[python]
+mkdocs-material
+
+
+dj-rest-auth
+allauth
+django-cors-headers
+rest_framework_simplejwt
+drf_spectacular
+django_extensions

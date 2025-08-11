@@ -1,0 +1,8 @@
+site_name: Academus Docs
+theme:
+  name: material
+
+nav:
+  - Início: index.md
+  - Configurações:
+      - Ambiente de Desenvolvimento (Django): dev-config.md

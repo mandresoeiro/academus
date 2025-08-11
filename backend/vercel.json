@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/apps/devillint-checklist/index.html"
+    }
+  ]
+}

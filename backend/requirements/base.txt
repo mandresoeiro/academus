@@ -1,3 +1,25 @@
-# Requisitos base
-django
-python-decouple
+# ✅ Dependências comuns para todos os ambientes
+    Django>=4.2
+    djangorestframework
+    python-decouple
+    python-dotenv
+    psycopg2-binary
+    gunicorn
+    python-decouple
+    gunicorn
+    whitenoise
+
+    Django>=4.2
+    djangorestframework
+    dj-rest-auth
+    django-allauth
+    python-decouple
+    djangorestframework-simplejwt
+    Pillow
+    django-cors-headers
+
+    dj-rest-auth
+    django-cors-headers
+    rest_framework_simplejwt
+    drf_spectacular
+    django_extensions

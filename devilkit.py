@@ -1,4 +1,3 @@
-
 """
 DevilKit Init Script - Setup profissional fullstack
 Este script automatiza a criação de um projeto backend Django pronto para produção.
@@ -7,7 +6,6 @@ Autor: Marcio Soeiro
 Licença: MIT
 """
 
-import os
 from pathlib import Path
 
 # Paths
@@ -28,7 +26,7 @@ dirs_to_create = [
     apps_dir,
     accounts_dir,
     requirements_dir,
-    scripts_dir
+    scripts_dir,
 ]
 
 # Arquivos base
@@ -39,12 +37,15 @@ files_to_create = {
     settings_dir / "prod.py": '"""Configurações de produção."""\n',
     backend_dir / ".env": "DEBUG=True\nSECRET_KEY=changeme\n",
     backend_dir / ".env.example": "DEBUG=True\nSECRET_KEY=changeme\n",
-    backend_dir / "pytest.ini": "[pytest]\ndjango_find_project = false\npython_files = test_*.py\n",
-    backend_dir / "README.md": "# Projeto DevilKit\n\nStack profissional com Django, React, Docker e mais.\n",
+    backend_dir
+    / "pytest.ini": "[pytest]\ndjango_find_project = false\npython_files = test_*.py\n",
+    backend_dir
+    / "README.md": "# Projeto DevilKit\n\nStack profissional com Django, React, Docker e mais.\n",
     backend_dir / "LICENSE": "MIT License\n\nCopyright (c) 2025 Marcio Soeiro\n",
     accounts_dir / "__init__.py": "",
     requirements_dir / "base.txt": "# Requisitos base\ndjango\npython-decouple\n",
-    requirements_dir / "dev.txt": "# Requisitos de desenvolvimento\npytest\npytest-django\n",
+    requirements_dir
+    / "dev.txt": "# Requisitos de desenvolvimento\npytest\npytest-django\n",
     requirements_dir / "prod.txt": "# Requisitos de produção\ngunicorn\n",
     scripts_dir / "bootstrap.sh": "#!/bin/bash\necho 'Inicializando ambiente...'\n",
     backend_dir / ".dockerignore": "__pycache__/\n*.pyc\n.env\n",

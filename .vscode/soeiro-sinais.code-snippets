@@ -1,0 +1,130 @@
+{
+  "Painel de Sinais - Completo (com cores)": {
+    "prefix": [
+      "painel",
+      "sinais"
+    ],
+    "description": "Insere o painel completo de sinais com cores e ícones",
+    "body": [
+      "# 🗂️ Legenda de Sinais – Projetos & Cursos",
+      "",
+      "> Use os sinais abaixo no início de cada mensagem para organizar e facilitar buscas no histórico.",
+      "",
+      "| Sinal | Ícone | Cor | Uso Rápido |",
+      "|---|---|---|---|",
+      "| 🟢 **[INÍCIO]** | 🚀 | Verde | Começo do projeto, curso ou tópico. |",
+      "| 🟦 **[PLANEJAMENTO]** | 📝 | Azul | Objetivos, escopo e requisitos. |",
+      "| 🟨 **[ESTRUTURA]** | 🗂️ | Amarelo | Pastas, arquivos base e setup inicial. |",
+      "| 🟪 **[DESENVOLVIMENTO]** | 💻 | Roxo | Codificação e implementação. |",
+      "| 🟧 **[REVISÃO]** | 🔍 | Laranja | Revisão de código ou progresso. |",
+      "| 🔴 **[FINALIZAÇÃO]** | 🏁 | Vermelho | Encerramento e checklist final. |",
+      "| ⚪ **[DÚVIDA]** | ❓ | Branco | Pergunta ou solicitação de explicação. |",
+      "| 🟤 **[CORREÇÃO]** | 🛠️ | Marrom | Ajuste/melhoria em algo existente. |",
+      "| 🟢 **[EXPLICAÇÃO]** | 📖 | Verde | Pedido de conceito detalhado. |",
+      "| 🟦 **[EXEMPLO]** | 📌 | Azul | Exemplo prático. |",
+      "| 🟨 **[BOAS PRÁTICAS]** | 🌟 | Amarelo | Padrões e recomendações. |",
+      "| 🔴 **[BUG]** | 🐞 | Vermelho | Reporte de erro. |",
+      "| 🟦 **[TESTE]** | 🧪 | Azul | Testes/QA. |",
+      "| 🟢 **[DEPLOY]** | 🚢 | Verde | Publicação/entrega. |",
+      "| 🟤 **[DOC]** | 📄 | Marrom | Documentação. |",
+      "| 🟦 **[AULA]** | 🎓 | Azul | Conteúdo teórico. |",
+      "| 🟨 **[PRÁTICA]** | 🏋️‍♂️ | Amarelo | Exercício/desafio. |",
+      "| 🟢 **[RESUMO]** | 📚 | Verde | Síntese do conteúdo. |",
+      "| 🟧 **[MATERIAL]** | 📎 | Laranja | Links/arquivos/referências. |"
+    ]
+  },
+  "Etiqueta - Etapa (com cores)": {
+    "prefix": [
+      "etapa",
+      "sig-etapa"
+    ],
+    "description": "Etiqueta de etapa com cor e ícone",
+    "body": [
+      "# ${1|🟢 [INÍCIO],🟦 [PLANEJAMENTO],🟨 [ESTRUTURA],🟪 [DESENVOLVIMENTO],🟧 [REVISÃO],🔴 [FINALIZAÇÃO]|} ${2:Descrição} — ${CURRENT_DATE} — ${TM_FILENAME_BASE}"
+    ]
+  },
+  "Etiqueta - Comunicação (com cores)": {
+    "prefix": [
+      "comu",
+      "sig-com"
+    ],
+    "description": "Etiqueta de comunicação com cor e ícone",
+    "body": [
+      "# ${1|⚪ [DÚVIDA],🟤 [CORREÇÃO],🟢 [EXPLICAÇÃO],🟦 [EXEMPLO],🟨 [BOAS PRÁTICAS]|} ${2:Descrição}"
+    ]
+  },
+  "Etiqueta - Técnico (com cores)": {
+    "prefix": [
+      "tech",
+      "sig-tech"
+    ],
+    "description": "Etiqueta técnica com cor e ícone",
+    "body": [
+      "# ${1|🔴 [BUG],🟦 [TESTE],🟢 [DEPLOY],🟤 [DOC]|} ${2:Descrição}"
+    ]
+  },
+  "Etiqueta - Aprendizado (com cores)": {
+    "prefix": [
+      "learn",
+      "sig-learn"
+    ],
+    "description": "Etiqueta de aprendizado com cor e ícone",
+    "body": [
+      "# ${1|🟦 [AULA],🟨 [PRÁTICA],🟢 [RESUMO],🟧 [MATERIAL]|} ${2:Descrição}"
+    ]
+  },
+  "Commit com Sinal": {
+    "prefix": [
+      "commit-sinal",
+      "git-sinal"
+    ],
+    "description": "Mensagem de commit com sinal e emoji",
+    "body": [
+      "${1|🟢 [INÍCIO],🟦 [PLANEJAMENTO],🟨 [ESTRUTURA],🟪 [DESENVOLVIMENTO],🟧 [REVISÃO],🔴 [FINALIZAÇÃO],⚪ [DÚVIDA],🟤 [CORREÇÃO],🟢 [EXPLICAÇÃO],🟦 [EXEMPLO],🟨 [BOAS PRÁTICAS],🔴 [BUG],🟦 [TESTE],🟢 [DEPLOY],🟤 [DOC],🟦 [AULA],🟨 [PRÁTICA],🟢 [RESUMO],🟧 [MATERIAL]|} ${2:Mensagem do commit}"
+    ]
+  },
+  "TODO com Sinal": {
+    "prefix": [
+      "todo-sinal"
+    ],
+    "description": "Comentário TODO com sinal e emoji",
+    "body": [
+      "# ${1|🟢 [INÍCIO],🟦 [PLANEJAMENTO],🟨 [ESTRUTURA],🟪 [DESENVOLVIMENTO],🟧 [REVISÃO],🔴 [FINALIZAÇÃO]|} TODO: ${2:Descreva a tarefa}"
+    ]
+  },
+  "Docstring Python Padrão": {
+    "prefix": [
+      "doc-py",
+      "docstring"
+    ],
+    "description": "Docstring Python padrão para funções",
+    "body": [
+      "\"\"\"",
+      "${1:Descrição breve da função}",
+      "",
+      "Args:",
+      "    ${2:param1} (${3:tipo}): ${4:descrição}.",
+      "    ${5:param2} (${6:tipo}): ${7:descrição}.",
+      "",
+      "Returns:",
+      "    ${8:tipo}: ${9:descrição}.",
+      "\"\"\""
+    ]
+  },
+  "Serializer DRF Base": {
+    "prefix": [
+      "serializer-base",
+      "drf-serializer"
+    ],
+    "description": "Cria um serializer DRF base para um modelo",
+    "body": [
+      "from rest_framework import serializers",
+      "from ${1:app}.models import ${2:Modelo}",
+      "",
+      "class ${2}Serializer(serializers.ModelSerializer):",
+      "    class Meta:",
+      "        model = ${2}",
+      "        fields = '__all__'"
+    ]
+  }
+}

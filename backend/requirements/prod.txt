@@ -1,2 +1,5 @@
-# Requisitos de produção
-gunicorn
+# 🚀 Dependências para produção
+-r base.txt
+
+gunicorn       # Servidor WSGI para produção
+whitenoise     # Servidor de arquivos estáticos
