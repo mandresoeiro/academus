@@ -1,4 +1,3 @@
-cat > .github/workflows/ci.yml <<'YML'
 name: CI
 
 on:
@@ -13,4 +12,3 @@ jobs:
     steps:
       - name: Say hello
         run: echo "CI is working"
-YML
