@@ -1,65 +1,77 @@
-# 🔥 DevilLint – Guia Crítico de Boas Práticas
+# 🚀 DevilKit Stack – Setup Profissional Django + React
 
-Este diretório contém:
+[![GitHub License](https://img.shields.io/github/license/mandresoeiro/devilkit-stack?color=blue)](https://github.com/mandresoeiro/devilkit-stack/blob/main/LICENSE)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/mandresoeiro/devilkit-stack/actions)
+[![Made with PDM](https://img.shields.io/badge/pdm-enabled-blue)](https://pdm.fming.dev)
 
-- `checklist/`: boas práticas e revisão
-- `template/`: projeto base para novos apps
-- `cli/init.py`: script para criar projetos com base no DevilLint
-- `Makefile`: comandos automáticos (init, check, lint)
-
-## Como criar um novo projeto
-
-```bash
-python cli/init.py nome-do-projeto
-yaml
-Copiar
-Editar
+> **DevilKit** é um projeto base com estrutura profissional para iniciar aplicações fullstack usando **Django** no backend e **React** no frontend. Automatize tudo com uma CLI poderosa usando [Typer](https://typer.tiangolo.com/).
 
 ---
 
-### 🧪 6. Criar `README.md` do repositório
+## 📦 Estrutura
 
-```md
-# 🧪 SoeiroTech Lab
-
-Repositório de laboratório para projetos pessoais com base no padrão técnico **DevilLint**.
-
-## Pastas
-
-- `devillint/`: guia técnico com checklist, estrutura base e CLI
-- `apps/`: projetos reais como `copVERDE`, `academus`, etc
-- `scripts/`: automações avulsas
-
-## Começar um novo projeto
-
-```bash
-python devillint/cli/init.py nome-do-projeto
-yaml
-Copiar
-Editar
+```text
+devilkit-stack/
+├── src/devilkit/         # Código da CLI com Typer
+├── backend/              # Projeto Django (gerado pelo comando init)
+├── tests/                # Testes automatizados
+├── pyproject.toml        # Configuração PDM + Typer
+├── devilkit.py           # Entry point da CLI
+└── README.md             # Este arquivo
+```
 
 ---
 
-## ✅ Posso te ajudar com os arquivos?
+## ⚙️ Instalação
 
-Se quiser, posso gerar agora:
+```bash
+git clone https://github.com/mandresoeiro/devilkit-stack.git
+cd devilkit-stack
+pdm install
+```
 
-- `devillint/cli/init.py`
-- `devillint/Makefile`
-- `devillint/README.md`
-- `soeirotech-lab/README.md`
+---
 
-Só dizer:
+## 🚀 Uso da CLI
 
-**✔️ Pode gerar tudo e me dar os arquivos para colar**  
-ou  
-**👷 Vamos fazer parte por parte (começando pelo init.py, por exemplo)**
+Crie a estrutura base do backend com:
 
+```bash
+pdm run devilkit init backend
+```
 
+Você pode alterar o nome:
 
+```bash
+pdm run devilkit init nome-do-projeto
+```
 
+---
 
+## 🧪 Rodando os testes
 
-Perguntar ao ChatGPT
-radm
+```bash
+pytest
+```
 
+---
+
+## 📂 Tecnologias e ferramentas
+
+- [x] Python 3.11+
+- [x] [Typer](https://typer.tiangolo.com/)
+- [x] [PDM](https://pdm.fming.dev)
+- [x] Docker (opcional)
+- [x] Estrutura pensada para produtividade e organização
+
+---
+
+## 🤝 Contribuindo
+
+Pull requests são bem-vindos. Para mudanças maiores, abra uma issue antes de modificar o que já existe.
+
+---
+
+## 📄 Licença
+
+Distribuído sob a licença **MIT**. Veja `LICENSE` para mais informações.
