@@ -6,9 +6,61 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+
 jobs:
-  sanity:
+  lint-and-test:
+    name: Lint & Tests (Python)
     runs-on: ubuntu-latest
+
     steps:
-      - name: Say hello
-        run: echo "CI is working"
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: |
+            requirements.txt
+            requirements/*.txt
+            pyproject.toml
+            pdm.lock
+
+      - name: Install base tools
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+          pip install ruff black isort pytest pytest-cov
+
+      - name: Install project dependencies
+        run: |
+          if [ -f "pdm.lock" ]; then
+            pip install pdm
+            pdm config python.use_venv false
+            pdm install -G :all --no-editable
+          elif [ -f "requirements.txt" ]; then
+            pip install -r requirements.txt
+          elif [ -f "pyproject.toml" ]; then
+            pip install .
+          else
+            echo "No dependency manifest found."
+          fi
+
+      - name: Ruff (lint)
+        run: ruff check .
+
+      - name: Black (format check)
+        run: black --check .
+
+      - name: isort (imports)
+        run: isort --check-only --diff .
+
+      - name: Run tests
+        run: |
+          if [ -d "tests" ]; then
+            pytest -q --maxfail=1 --disable-warnings --cov --cov-report=xml
+          else
+            echo "No tests found"
+          fi
